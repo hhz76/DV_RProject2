@@ -5,15 +5,24 @@ date: "Friday, February 06, 2015"
 output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<br><br><font size = 5> This is our second project and it’s all about earthquakes!!!
+<br>Be ready for the data to rock your world!</font>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 ---
-```{r, echo=FALSE}
-source("../01 Data/data.r")
-source("../02 Data Wrangling/data_wrangling.R")
-
+```{r}
+source("../01 Data/data.r", echo = TRUE)
 ```
+
+####Here are three graphs we created to visualize some of our data wrangling findings.
+
+####The first graph is a heat map that shows the relationship between magnitude and the longitude.
+
+#### The second graph is a point graph that demonstrates the relationship between magnitude to the number of stations. It shows us that there is a linear relationship between the intensity of an earthquake and the number of stations that observe it.
+
+#### The third graph is a line graph (average depth and magnitude by day) that shows how those two values trend over time.
+
+```{r}
+source("../02 Data Wrangling/data_wrangling.R", echo = TRUE)
+```
+
+### From this project, we learned how to pipe and show the flow of our data as well as making visualizations with the data we have selected. We learned analytical skills by figuring out which data was important and how to present it in a clear format. Knowing how to pipe made our workflow more effective and less stressful.

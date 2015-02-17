@@ -1,6 +1,8 @@
-library("dplyr")
-library("ggplot2")
-library("reshape2")
+require("dplyr")
+require("ggplot2")
+require("reshape2")
+require("tidyr")
+
 earthquakes %>% group_by(LONGITUDE) %>% summarize(avg_mag = mean(MAG)) %>% ggplot(aes(x = LONGITUDE, y = avg_mag)) + geom_density2d()
 earthquakes %>% group_by(NST) %>% summarise(ave_mag=mean(MAG)) %>% ggplot(aes(x=NST, y=ave_mag)) + geom_point()
 
