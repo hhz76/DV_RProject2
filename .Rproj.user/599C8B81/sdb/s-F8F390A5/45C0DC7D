@@ -1,0 +1,17 @@
+{
+    "contents" : "library(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nearthquakes %>% group_by(LONGITUDE) %>% summarize(avg_mag = mean(MAG)) %>% ggplot(aes(x = LONGITUDE, y = avg_mag)) + geom_density2d()\nearthquakes %>% group_by(NST) %>% summarise(ave_mag=mean(MAG)) %>% ggplot(aes(x=NST, y=ave_mag)) + geom_point()\n\neq_date_group <- earthquakes %>% mutate(date = substr(TIME,1,10)) %>% group_by(date) %>% summarize(avg_depth=mean(DEPTH),avg_mag=mean(MAG),num_eqs = n()) %>% arrange(date)\n\nmdf <- melt(eq_date_group, id.vars=\"date\", measure.vars = c(\"avg_depth\",\"avg_mag\"))\n\nggplot(mdf, aes(x=date,y=value,group=variable))+geom_line(aes(color=variable))\n",
+    "created" : 1424142475006.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3032708221",
+    "id" : "45C0DC7D",
+    "lastKnownWriteTime" : 1424144309,
+    "path" : "C:/Users/zach/DataVisualization/DV_RProject2/02 Data Wrangling/data_wrangling.R",
+    "project_path" : "02 Data Wrangling/data_wrangling.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

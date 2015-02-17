@@ -1,0 +1,17 @@
+{
+    "contents" : "library(\"RCurl\")\nearthquakes <- data.frame(eval(parse(text=substring(getURL(URLencode('http://129.152.144.84:5001/rest/native/?query=\"select * from earthquakes\"'), httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_hhz76', PASS='orcl_hhz76', MODE='native_mode', MODEL='model', returnFor = 'R', returnDimensions = 'False'), verbose = TRUE), 1, 2^31-1))))\nhead(earthquakes)",
+    "created" : 1424142437732.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "828695298",
+    "id" : "34FFF4D4",
+    "lastKnownWriteTime" : 1424143377,
+    "path" : "C:/Users/zach/DataVisualization/DV_RProject2/01 Data/data.r",
+    "project_path" : "01 Data/data.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
